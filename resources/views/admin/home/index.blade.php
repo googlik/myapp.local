@@ -1,1 +1,5 @@
-<h1>Hello, Admin!</h1>
+@extends('layouts.admin_layout')
+@section('title')Главная@endsection
+@section('content')
+
+@endsection
