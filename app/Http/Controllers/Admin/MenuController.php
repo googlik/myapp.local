@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Menu;
 use Illuminate\Http\Request;
 
-class PhotoController extends Controller
+class MenuController extends Controller
 {
     /**
      * Display a listing of the resource.
