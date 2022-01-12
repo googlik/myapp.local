@@ -1,5 +1,4 @@
 @extends('layouts.admin_layout')
-@section('title')Главная@endsection
-@section('content')
-
+@section('title')
+    Главная страница
 @endsection
