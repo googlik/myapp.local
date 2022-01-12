@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Menu;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class MenuController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +16,7 @@ class MenuController extends Controller
      */
     public function index()
     {
-        // $menus = Menu::all();
-        // return view('admin.menu.index', ['menus' => $menus]);
-        return view('admin.menu.index', ['menus' => DB::table('menus')->paginate(5)]);
+        return view('admin.category.index', ['categories' => DB::table('categories')->paginate(5)]);
     }
 
     /**
@@ -45,10 +43,10 @@ class MenuController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Menu  $menu
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Menu $menu)
+    public function show(Category $category)
     {
         //
     }
@@ -56,10 +54,10 @@ class MenuController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Menu  $menu
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Menu $menu)
+    public function edit(Category $category)
     {
         //
     }
@@ -68,10 +66,10 @@ class MenuController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Menu  $menu
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Menu $menu)
+    public function update(Request $request, Category $category)
     {
         //
     }
@@ -79,10 +77,10 @@ class MenuController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Menu  $menu
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Menu $menu)
+    public function destroy(Category $category)
     {
         //
     }
