@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\MenuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::middleware(['role:admin'])->prefix('admin_panel')->group(function() {
 
     Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('homeAdmin');
+    Route::get('/menu', [App\Http\Controllers\Admin\MenuController::class, 'index'])->name('menuAdmin');
 
     // Route::resource('category', CategoryController::class);
     // Route::resource('post', PostController::class);
